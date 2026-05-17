@@ -1,17 +1,19 @@
-# 🔐 iOS Provisioning Profile Parser
+# 📱 iOS Provisioning Profile Parser
 
-Extract certificate, entitlement, and expiry info from `.mobileprovision` files without Xcode.
+Parse `.mobileprovision` files without Xcode. Extract certificates, entitlements, devices, and expiry dates.
 
 ## Usage
-```bash
-npm install -g ios-provisioning-parser
 
-parse-provisioning-profile MyApp.mobileprovision
-# Shows: team ID, bundle IDs, expiry, certificates, entitlements
+```bash
+npm install
+npm run parse path/to/profile.mobileprovision
+npm run verify path/to/profile.mobileprovision path/to/app.ipa
 ```
 
-## Features
-- No Xcode or macOS required
-- Inspect entitlements before installing
-- Check expiry dates
-- Export as JSON/CSV
+## What it does
+
+- ✅ Decodes DER-encoded provisioning profiles
+- ✅ Extracts all certificates with expiry checks
+- ✅ Lists provisioned devices and their UDIDs
+- ✅ Shows entitlements (push notifications, iCloud, etc.)
+- ✅ Validates signature chain
