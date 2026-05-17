@@ -1,0 +1,12 @@
+{
+  "name": "ios-provisioning-parser",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "parse": "node parse.js",
+    "verify": "node verify.js"
+  },
+  "dependencies": {
+    "asn1.js": "^5.4.1"
+  }
+}
